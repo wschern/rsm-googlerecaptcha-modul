@@ -1,0 +1,41 @@
+<?php if (!$this->tableless): ?>
+	
+  <tr class="<?php echo $this->rowClass; ?>">
+    <td class="col_0 col_first">
+		<?php if ($this->label): ?>  	
+			<label for="ctrl_<?= $this->id ?>"<?php if ($this->class): ?> class="<?= $this->class ?>"<?php endif; ?>>
+			  <span class="invisible"><?= $this->mandatoryField ?> </span><?= $this->label ?><span class="mandatory">*</span>
+			</label>
+		<?php endif; ?>
+    </td>
+    <td class="col_1 col_last">
+		<?php if ($this->hasErrors()): ?>  	
+			<p class="error"><?= $this->getErrorAsString() ?></p>
+		<?php endif; ?>
+		<?= $this->generate() ?>
+    </td>
+  </tr>
+
+<?php else: ?>	
+
+	<?php //For Contao < 3.3 check if method exists ?>
+	<?php if(method_exists($this, 'extend')) $this->extend('form_row'); ?>	
+
+	<?php if(method_exists($this, 'block')) $this->block('label'); ?>
+		<?php if ($this->label): ?>  	
+			<label for="ctrl_<?= $this->id ?>"<?php if ($this->class): ?> class="<?= $this->class ?>"<?php endif; ?>>
+			  <span class="invisible"><?= $this->mandatoryField ?> </span><?= $this->label ?><span class="mandatory">*</span>
+			</label>
+		<?php endif; ?>
+	<?php if(method_exists($this, 'endblock')) $this->endblock(); ?>
+
+	<?php if(method_exists($this, 'block')) $this->block('field'); ?>
+
+		<?php if ($this->hasErrors()): ?>  	
+			<p class="error"><?= $this->getErrorAsString() ?></p>
+		<?php endif; ?>
+		<?= $this->generate() ?>
+
+	<?php if(method_exists($this, 'endblock')) $this->endblock(); ?>
+
+<?php endif; ?>
