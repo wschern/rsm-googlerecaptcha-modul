@@ -1,4 +1,4 @@
-# Google reCAPTCHA Modul
+# Google reCAPTCHA Modul für Contao Open Source CMS
 
 ## Diese Erweiterung stellt Google reCAPTCHA V2 in Form eines neuen Formularfeldes im Formulargenerator bereit.
 
