@@ -1,6 +1,6 @@
 {
 	"name":"rsm/rsm-googlerecaptcha-modul",
-	"description":"Diese Erweiterung stellt Google reCAPTCHA V2 in Form eines neuen Formularfeldes im Formulargenerator bereit. This extension provides Google reCAPTCHA V2 in the form of a new form field in the form generator of Contao Open Source CMS.",
+	"description":"Diese Contao 4 Erweiterung stellt Google reCAPTCHA V2 in Form eines neuen Formularfeldes im Formulargenerator bereit. This extension provides Google reCAPTCHA V2 in the form of a new form field in the form generator of Contao Open Source CMS.",
 	"keywords":["contao","captcha","reCAPTCHA","form","rsm"],
 	"type":"contao-bundle",
 	"homepage":"https://www.werbeagentur-rsm.de",
