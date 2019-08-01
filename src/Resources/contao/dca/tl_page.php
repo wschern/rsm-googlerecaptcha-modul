@@ -14,7 +14,7 @@
 /**
  * Table tl_page
  */
-$GLOBALS['TL_DCA']['tl_page']['palettes']['root'] = str_replace(';{alias_legend', ';{rsm_google_recaptcha_legend:hide},rsm_public_key,rsm_private_key;{alias_legend', $GLOBALS['TL_DCA']['tl_page']['palettes']['root']);
+$GLOBALS['TL_DCA']['tl_page']['palettes']['root'] = str_replace(';{layout_legend', ';{rsm_google_recaptcha_legend:hide},rsm_public_key,rsm_private_key;{layout_legend', $GLOBALS['TL_DCA']['tl_page']['palettes']['root']);
 
 $GLOBALS['TL_DCA']['tl_page']['fields']['rsm_public_key'] = array(
     'label'         => &$GLOBALS['TL_LANG']['tl_page']['rsm_public_key'],
